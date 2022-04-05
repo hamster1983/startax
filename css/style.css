@@ -281,3 +281,355 @@ header img {
 		margin-top: 20px;
 	}
 }
+
+.naprav-slider-wrap {
+	position: relative;
+}
+.naprav-slider-wrap:before,
+.naprav-slider-wrap:after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 155px;
+	position: absolute;
+	top: 0;
+	background-color: #fff;
+	opacity: .6;
+	z-index: 5;
+}
+.naprav-slider-wrap:before {
+	left: 0;
+}
+.naprav-slider-wrap:after {
+	right: 0;
+}
+/*.naprav-slider .slick-slide {
+	opacity: .5;
+}*/
+.naprav-slide {
+	display: block;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 335px;
+	height: 335px;
+	margin: 0 20px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.naprav-slide span {
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+.naprav-tunis {
+	background-image: url('../img/thumb-tunis.jpg');
+}
+.naprav-oae {
+	background-image: url('../img/thumb-oae.jpg');
+}
+.naprav-tanzania {
+	background-image: url('../img/thumb-tanzania.jpg');
+}
+.naprav-egipet {
+	background-image: url('../img/thumb-egipet.jpg');
+}
+.naprav-turcia {
+	background-image: url('../img/thumb-turcia.jpg');
+}
+.naprav-slider .slick-prev {
+	left: 45px;
+	z-index: 10;
+}
+.naprav-slider .slick-next {
+	right: 55px;
+	z-index: 10;
+}
+.naprav-slider .slick-prev:before {
+    content: url('../img/arr-left.png');
+}
+.naprav-slider .slick-next:before {
+    content: url('../img/arr-right.png');
+}
+@media (max-width: 1400px) {
+	.naprav-slider-wrap:before,
+	.naprav-slider-wrap:after {
+		opacity: 0;
+	}
+	.naprav-slide {
+		margin: 0 10px;
+	}
+	.naprav-slider .slick-prev {
+		left: 10px;
+	}
+	.naprav-slider .slick-next {
+		right: 20px;
+	}
+}
+@media (max-width: 1199px) {
+	.naprav-slider {
+		margin: 0 -0.5%;
+	}
+	.naprav-slide {
+		margin: 0 auto;
+		width: auto;
+		height: auto;
+		padding-top: 100%;
+		max-width: 95%;
+	}
+	.naprav-slider .slick-prev {
+		left: 20px;
+	}
+	.naprav-slider .slick-next {
+		right: 30px;
+	}
+}
+@media (max-width: 900px) {
+	.naprav-slider {
+		margin: 0 -0.7%;
+	}
+	.naprav-slide span {
+		font-size: 20px;
+	}
+}
+@media (max-width: 600px) {
+	.naprav-slider {
+		margin: 0 -1%;
+	}
+}
+@media (max-width: 480px) {
+	.naprav-slide span {
+		font-size: 16px;
+		left: 15px;
+		bottom: 15px;
+	}
+}
+
+.main-banner {
+	margin: 55px auto;
+}
+.main-banner img {
+	display: block;
+	width: 100%;
+}
+@media (max-width: 750px) {
+	.main-banner {
+		margin: 35px auto;
+	}
+}
+
+.preim-wrap h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 52px;
+	margin-top: 0;
+}
+.preim {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 65px;
+}
+.preim-item {
+	width: 24%;
+	height: 305px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: 1px solid #EFEFEF;
+	padding: 10px;
+	/*transition: .5s;*/
+}
+/*.preim-item:hover {
+	transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}*/
+.preim-icon {
+	box-shadow: 1px 1px 4px #FFD3BF;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top: -75px;
+	background-color: #fff;
+	transition: .2s;
+}
+.preim-item path {
+	fill: #FF6B26;
+}
+.preim-item path.fill-white {
+	fill: #fff;
+}
+.preim-item:hover path {
+	fill: #fff;
+}
+.preim-item:hover path.fill-white {
+	fill: #FF6B26;
+}
+.preim-item:hover .preim-icon {
+	background-color: #FF6B26;
+}
+.preim-item.preim-gibkost path {
+	stroke: #fff;
+}
+.preim-item.preim-gibkost circle {
+	fill: #FF6B26;
+}
+.preim-item.preim-gibkost:hover path {
+	stroke: #FF6B26;
+}
+.preim-item.preim-gibkost:hover circle {
+	fill: #fff;
+}
+.preim-item h3 {
+	font-size: 40px;
+	line-height: 52px;
+	text-align: center;
+	padding-top: 20px;
+}
+@media (max-width: 1400px) {
+	.preim-item h3 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 1100px) {
+	.preim-item {
+		height: auto;
+	}
+	.preim-item h3 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+@media (max-width: 900px) {
+	.preim {
+		flex-wrap: wrap;
+	}
+	.preim-item {
+		width: 49%;
+	}
+	.preim-item:nth-of-type(1),
+	.preim-item:nth-of-type(2) {
+		margin-bottom: 100px;
+	}
+}
+@media (max-width: 450px) {
+	.preim-wrap h2 {
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.preim-item {
+		width: 100%;
+	}
+	.preim-item:nth-of-type(1),
+	.preim-item:nth-of-type(2),
+	.preim-item:nth-of-type(3) {
+		margin-bottom: 100px;
+	}
+}
+
+.startax-form {
+	display: flex;
+	justify-content: space-between;
+	margin: 55px auto;
+}
+.startax-form h2 {
+	font-size: 70px;
+	line-height: 90px;
+	font-weight: 100;
+	margin: 0;
+}
+.startax-form p {
+	font-size: 20px;
+	line-height: 26px;
+}
+.startax-form-content,
+.startax-form-pic {
+	width: 49%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.startax-form-content {
+	background-color: #FFF6F2;
+	padding: 10px 35px 25px;
+}
+.startax-form-pic {
+	background-image: url('../img/form-pic.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.startax-form-content form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.startax-form-content input,
+.startax-form-content textarea {
+	border: 1px solid #FF6B26;
+	border-radius: 10px;
+	background-color: transparent;
+	color: #999;
+	font-size: 14px;
+	line-height: 14px;
+	outline: none;
+	padding: 10px;
+}
+.startax-form-content input[type="text"] {
+	width: 39%;
+}
+.startax-form-content input[type="email"] {
+	width: 59%;
+}
+.startax-form-content textarea {
+	resize: none;
+	width: 100%;
+	height: 100px;
+	margin: 15px 0;
+}
+.startax-form-content button[type="submit"] {
+	background-color: #FF6B26;
+	border-radius: 10px;
+	border: none;
+	color: #fff;
+	font-size: 21px;
+	line-height: 28px;
+	padding: 5px 15px;
+	cursor: pointer;
+	transition: .2s;
+}
+.startax-form-content button[type="submit"]:hover {
+	background-color: #fff;
+	color: #FF6B26;
+}
+.startax-contacts {
+	display: flex;
+	padding-top: 50px;
+}
+.startax-email-site,
+.startax-adress {
+	width: 50%;
+}
+.startax-email-site a,
+.startax-adress {
+	display: flex;
+	align-items: center;
+	color: #1F1F1F;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 23px;
+}
+.startax-email img,
+.startax-adress img {
+	margin-right: 10px;
+}
+.startax-site img {
+	margin: 5px 12px 0 2px;
+}
