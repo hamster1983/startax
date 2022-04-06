@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 html, body {
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 body {
 	font-family: OpenSans, sans-serif;
@@ -44,9 +44,27 @@ header img {
 	color: #000;
 	position: relative;
 }
+.navbar a:before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: #EA5F1E;
+	position: absolute;
+	bottom: -1px;
+	right: 0;
+	transition: .3s;
+}
+.navbar a:hover:before {
+	width: 100%;
+	left: 0;
+}
 .navbar > li > a {
 	display: block;
 	padding: 10px 0;
+}
+.navbar > li > a:before {
+	bottom: 8px;
 }
 .dropdown-item {
 	position: relative;
@@ -168,7 +186,7 @@ header img {
 	.navbar {
 		position: absolute;
 		left: 0;
-		top: 100%;
+		top: 80%;
 		margin-left: 0;
 		opacity: 0;
 		z-index: -1;
@@ -177,7 +195,7 @@ header img {
 	}
 	.navbar.visible {
 		opacity: 1;
-		z-index: 1;
+		z-index: 3;
 	}
 }
 @media (max-width: 900px) {
@@ -190,7 +208,7 @@ header img {
 }
 @media (max-width: 480px) {
 	header.container {
-		padding: 10px 15px;
+		padding: 15px 15px 20px;
 	}
 	.logo-top img {
 		width: 150px;
@@ -198,6 +216,9 @@ header img {
 	.navbar > li > a,
 	.dropdown-menu > li {
 		padding: 5px 0;
+	}
+	.navbar > li > a:before {
+		bottom: 0;
 	}
 }
 
@@ -539,7 +560,7 @@ header img {
 .startax-form {
 	display: flex;
 	justify-content: space-between;
-	margin: 55px auto;
+	margin: 55px auto 100px;
 }
 .startax-form h2 {
 	font-size: 70px;
@@ -559,7 +580,7 @@ header img {
 }
 .startax-form-content {
 	background-color: #FFF6F2;
-	padding: 10px 35px 25px;
+	padding: 15px 35px 30px;
 }
 .startax-form-pic {
 	background-image: url('../img/form-pic.jpg');
@@ -631,5 +652,344 @@ header img {
 	margin-right: 10px;
 }
 .startax-site img {
-	margin: 5px 12px 0 2px;
+	margin: 10px 12px 10px 2px;
+}
+@media (max-width: 1440px) {
+	.startax-form h2 {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+@media (max-width: 1199px) {
+	.startax-form h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.startax-form-content {
+		padding: 15px 25px 20px;
+	}
+	.startax-form p,
+	.startax-email-site a,
+	.startax-adress {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.startax-contacts {
+		flex-wrap: wrap;
+		padding-top: 35px;
+	}
+	.startax-email-site,
+	.startax-adress {
+		width: 100%;
+	}
+	.startax-adress img {
+		margin: 0 18px 0 8px;
+	}
+}
+@media (max-width: 850px) {
+	.startax-form h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 750px) {
+	.startax-form {
+		flex-wrap: wrap;
+		margin: 35px auto;
+	}
+	.startax-form-content,
+	.startax-form-pic {
+		width: 100%;
+	}
+	.startax-form-pic {
+		padding-top: 100%;
+		margin-top: 20px;
+	}
+	.startax-form h2 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 480px) {
+	.startax-form-content {
+		padding: 15px;
+	}
+	.startax-form-content input[type="text"],
+	.startax-form-content input[type="email"] {
+		width: 100%;
+	}
+	.startax-form-content input[type="email"] {
+		margin-top: 15px;
+	}
+	.startax-form h2 {
+		text-align: center;
+	}
+}
+
+footer {
+	background-color: #1F1F1F;
+	padding: 50px 0 30px;
+}
+footer .container {
+	display: flex;
+}
+.foot-logo-soc {
+	width: 40%;
+	padding: 0 20px;
+}
+.foot-soc {
+	width: 170px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0 0 70px;
+}
+.foot-menu {
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foot-menu a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 26px;
+	display: block;
+	width: 31%;
+	margin: 10px 0 30px;
+}
+.foot-menu a:hover {
+	text-decoration: underline;
+}
+@media (max-width: 1199px) {
+	.foot-logo-soc {
+		width: 30%;
+	}
+	.foot-menu {
+		width: 70%;
+	}
+	.foot-menu a {
+		width: 33%;
+	}
+}
+@media (max-width: 750px) {
+	footer {
+		padding: 50px 0;
+	}
+	.foot-logo-soc {
+		width: 60%;
+	}
+	.foot-menu {
+		width: 40%;
+	}
+	.foot-menu a {
+		width: 100%;
+		margin: 0 0 10px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+@media (max-width: 480px) {
+	footer .container {
+		flex-wrap: wrap;
+	}
+	.foot-logo-soc,
+	.foot-menu {
+		width: 100%;
+	}
+	.foot-menu a {
+		width: 50%;
+		padding-left: 20px;
+	}
+	.foot-logo-soc img {
+		display: block;
+		margin: 0 auto;
+	}
+	.foot-soc {
+		margin: 0 auto 40px;
+		width: 100px;
+		padding-left: 0;
+	}
+}
+
+
+/* about */
+.about-pic {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.about-pic img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.strany {
+	margin: 55px auto;
+}
+.strany-opisanie {
+	font-size: 30px;
+	line-height: 38px;
+	font-weight: bold;
+	text-align: center;
+	max-width: 1260px;
+	margin: 0 auto 30px;
+}
+.strany [type="radio"] {
+	display: none;
+}
+.strany-orange-block {
+	position: relative;
+	background: #FF6B26;
+	border-radius: 10px;
+	padding: 40px 0;
+}
+.strany-orange-block:before {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #FF6B26;
+	transform: rotate(45deg);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -13px;
+}
+.strany-label-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 850px;
+	margin: 0 auto;
+}
+.strany-label-wrap label {
+	text-transform: uppercase;
+	font-size: 44px;
+	line-height: 57px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	padding: 20px 45px;
+}
+#strany-tunis:checked ~ .strany-orange-block [for="strany-tunis"],
+#strany-turcia:checked ~ .strany-orange-block [for="strany-turcia"],
+#strany-egipet:checked ~ .strany-orange-block [for="strany-egipet"],
+#strany-oae:checked ~ .strany-orange-block [for="strany-oae"],
+#strany-tanzania:checked ~ .strany-orange-block [for="strany-tanzania"] {
+	color: #1F1F1F;
+}
+.strany-uslugi {
+	display: none;
+	justify-content: space-between;
+	padding-top: 70px;
+}
+.strany-uslugi-item {
+	display: block;
+	width: 18%;
+	text-decoration: none;
+}
+.strany-uslugi-pic {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.strany-uslugi-pic img {
+	width: 100%;
+}
+.strany-uslugi-item h4 {
+	color: #1F1F1F;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 15px 0 0;
+}
+#strany-tunis:checked ~ .strany-uslugi.uslugi-tunis,
+#strany-turcia:checked ~ .strany-uslugi.uslugi-turcia,
+#strany-egipet:checked ~ .strany-uslugi.uslugi-egipet,
+#strany-oae:checked ~ .strany-uslugi.uslugi-oae,
+#strany-tanzania:checked ~ .strany-uslugi.uslugi-tanzania {
+	display: flex;
+}
+
+@media (max-width: 1199px) {
+	.strany-orange-block {
+		padding: 25px 0;
+	}
+	.strany-label-wrap {
+		max-width: 650px;
+	}
+	.strany-label-wrap label {
+		font-size: 36px;
+		line-height: 42px;
+		font-weight: bold;
+		padding: 15px 25px;
+	}
+	.strany-uslugi {
+		padding-top: 40px;
+	}
+	.strany-uslugi-item h4 {
+		font-size: 18px;
+		line-height: 26px;
+		margin: 10px 0 0;
+	}
+}
+@media (max-width: 750px) {
+	.strany {
+		margin: 35px auto;
+	}
+	.strany-opisanie {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.strany-label-wrap {
+		max-width: 550px;
+	}
+	.strany-label-wrap label {
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: bold;
+		padding: 10px 20px;
+	}
+	.strany-uslugi-item h4 {
+		font-size: 14px;
+		line-height: 20px;
+		margin: 5px 0 0;
+	}
+}
+@media (max-width: 600px) {
+	.strany-opisanie {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.strany-label-wrap label {
+		font-size: 24px;
+		line-height: 30px;
+		padding: 10px;
+	}
+	.strany-uslugi {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -1.5%;
+	}
+	.strany-uslugi-item {
+		display: block;
+		width: 31%;
+		margin: 0 1% 15px;
+	}
+}
+@media (max-width: 480px) {
+	.strany-opisanie {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.strany-orange-block {
+		padding: 15px 0;
+	}
+	.strany-label-wrap label {
+		font-size: 18px;
+		line-height: 24px;
+		padding: 5px 8px;
+	}
 }

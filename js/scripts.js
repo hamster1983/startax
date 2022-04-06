@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  new WOW().init();
 
   $('.current-lang').on('click', function(){
     $('.change-lang').addClass('active')
@@ -21,22 +22,12 @@ $(document).ready(function(){
     }
   });*/
 
+
   $('.navbar-toggler').on('click',function(){
     $(this).toggleClass('opened');
     $('.navbar').toggleClass('visible');
   });
 
-  /*$('.nav-link').on('click',function(){
-    let elementClick = $(this).attr('href');
-    let destination = $(elementClick).offset().top;
-    //if(window.matchMedia('(max-width: 767px)').matches) {
-      //destination -= $('.navbar-collapse').height();
-    //}
-    $('html, body').animate({ scrollTop: destination }, 1000);
-    $('.navbar-toggler').removeClass('opened');
-    $('.navbar').removeClass('visible');
-    return false;
-  });*/
 
   $('.top-slider').slick({
     slidesToShow: 1,
@@ -49,6 +40,7 @@ $(document).ready(function(){
     fade: true,
     pauseOnHover: false
   });
+
 
   $('.naprav-slider').slick({
     slidesToShow: 4,
@@ -97,95 +89,5 @@ $(document).ready(function(){
     $('.naprav-slider .slick-center').prev().css('opacity',1);
     $('.naprav-slider .slick-center').next().css('opacity',1);
   });*/
-
-  
-
-  $('.avia .part-slider').slick({
-    slidesToShow: 10,
-    slidesToScroll: 3,
-    arrows: true,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 1000,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 8
-        }
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 6
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
-  $('.postav .part-slider').slick({
-    slidesToShow: 10,
-    slidesToScroll: 2,
-    arrows: true,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 1000,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 8
-        }
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 6
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
 
 });
