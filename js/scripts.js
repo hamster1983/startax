@@ -1,13 +1,21 @@
 $(document).ready(function(){
 
-  new WOW().init();
-
   $('.current-lang').on('click', function(){
     $('.change-lang').addClass('active')
   });
-  $('.current-lang-small').on('click', function(){
+  /*$('.current-lang-small').on('click', function(){
     $('.change-lang').removeClass('active')
-  });
+  });*/
+
+  $(document).on('click',function(e){
+    let elem = e.target;
+    if($(elem).hasClass('current-lang') || $(elem).hasClass('new-lang-link') || $(elem).hasClass('new-lang-pic') || $(elem).hasClass('new-lang-name')) {
+      return;
+    }
+    else {
+      $('.change-lang').removeClass('active');
+    }
+  })
 
 
   /*$('.up').on('click',function () {
@@ -22,7 +30,6 @@ $(document).ready(function(){
     }
   });*/
 
-
   $('.navbar-toggler').on('click',function(){
     $(this).toggleClass('opened');
     $('.navbar').toggleClass('visible');
@@ -35,7 +42,7 @@ $(document).ready(function(){
     arrows: true,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
     speed: 1000,
     fade: true,
     pauseOnHover: false
@@ -47,7 +54,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     speed: 1000,
     centerMode: true,
@@ -77,6 +84,24 @@ $(document).ready(function(){
         }
       },
     ]
+  });
+
+  $('.country-card').on('click', function(){
+    let data = $(this).attr('data-card');
+    $('.country-card-content').each(function(){
+      if($(this).attr('id') == data) {
+        $(this).addClass('active')
+      }
+    })
+  });
+
+  $('.country-card-close').on('click', function(){
+    $('.country-card-content').removeClass('active')
+  });
+
+  $('.startax-hotels-item').on('click', function(){
+    $(this).children('.startax-hotels-list').toggleClass('active');
+    $('.startax-hotels-list').not($(this).children()).removeClass('active');
   });
 
   /*$('.naprav-slider .slick-center').css('opacity',1);

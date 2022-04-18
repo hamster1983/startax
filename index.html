@@ -15,7 +15,6 @@
 	<link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/slick.css" rel="stylesheet" type="text/css">
     <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -46,8 +45,8 @@
 			<img src="img/rus.svg" alt="" role="button" class="current-lang">
 			<div class="change-lang">
 				<a href="#" class="current-lang-small"><img src="img/rus-small.svg" alt=""> <strong>Русский</strong></a>
-				<a href="#"><img src="img/fr-small.svg" alt=""> <span>Français</span></a>
-				<a href="#"><img src="img/eng-small.svg" alt=""> <span>English</span></a>
+				<a href="#" class="new-lang-link"><img src="img/fr-small.svg" alt="" class="new-lang-pic"> <span class="new-lang-name">Français</span></a>
+				<a href="#" class="new-lang-link"><img src="img/eng-small.svg" alt="" class="new-lang-pic"> <span class="new-lang-name">English</span></a>
 			</div>
 		</div>
 	</header>
@@ -69,7 +68,7 @@
 		<div class="main-pic"></div>
 	</div>
 
-	<div class="container naprav-slider-wrap wow flipInX" data-wow-duration="2s">
+	<div class="container naprav-slider-wrap">
 		<div class="naprav-slider">
 			<div>
 				<a href="#" class="naprav-slide naprav-tunis"><span>ТУНИС</span></a>
@@ -89,12 +88,12 @@
 		</div>
 	</div>
 
-	<div class="container main-banner wow fadeIn" data-wow-duration="3s" data-wow-offset="200"><a href="#"><img src="img/main-banner.jpg" alt=""></a></div>
+	<div class="container main-banner"><a href="#"><img src="img/main-banner.jpg" alt=""></a></div>
 
 	<div class="container preim-wrap">
 		<h2>Преимущества</h2>
 		<div class="preim">
-			<div class="preim-item preim-nadezhnost wow fadeInLeft" data-wow-offset="100">
+			<div class="preim-item preim-nadezhnost">
 				<div class="preim-icon">
 					<svg width="60" height="70" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M29.9732 69.9375L14.547 61.7124C10.1493 59.3727 6.47165 55.8797 3.90882 51.6082C1.346 47.3367 -0.00527794 42.4479 1.54926e-05 37.4665V4.99554C0.001338 3.67104 0.528077 2.40118 1.46464 1.46462C2.40119 0.528061 3.67106 0.00132251 4.99555 0H54.9509C56.2754 0.00132251 57.5453 0.528061 58.4818 1.46462C59.4184 2.40118 59.9451 3.67104 59.9464 4.99554V37.4665C59.9517 42.4479 58.6005 47.3367 56.0376 51.6082C53.4748 55.8797 49.7972 59.3727 45.3994 61.7124L29.9732 69.9375ZM4.99555 4.99554V37.4665C4.99141 41.5424 6.09732 45.5424 8.1946 49.0373C10.2919 52.5322 13.3013 55.3899 16.8999 57.3038L29.9732 64.2751L43.0465 57.3063C46.6455 55.3922 49.6552 52.5341 51.7525 49.0387C53.8498 45.5434 54.9555 41.5428 54.9509 37.4665V4.99554H4.99555Z"/>
@@ -103,7 +102,7 @@
 				</div>
 				<h3>Надежность</h3>
 			</div>
-			<div class="preim-item preim-operativnost wow fadeInDown" data-wow-offset="100">
+			<div class="preim-item preim-operativnost">
 				<div class="preim-icon">
 					<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M26.8041 18.5209C20.8541 25.2 16.7708 34.7959 16.3916 35.7L9.79995 32.8709C7.90411 32.0542 7.43745 29.575 8.89578 28.1167L17.6749 19.3375C19.0458 17.9667 21.0291 17.3542 22.9541 17.7334L26.8041 18.5209ZM31.1499 48.1542C32.0249 49.0292 33.3083 49.2625 34.4166 48.7375C37.7999 47.1625 45.0624 43.4584 49.7583 38.7625C63.1458 25.375 63.2624 14.4667 62.4749 9.80003C62.3717 9.22681 62.0957 8.69885 61.6838 8.287C61.272 7.87515 60.744 7.59909 60.1708 7.49587C55.5041 6.70837 44.5958 6.82503 31.2083 20.2125C26.5124 24.9084 22.8374 32.1709 21.2333 35.5542C20.7083 36.6625 20.9708 37.975 21.8166 38.8209L31.1499 48.1542ZM51.4791 43.1959C44.7999 49.1459 35.2041 53.2292 34.2999 53.6084L37.1291 60.2C37.9458 62.0959 40.4249 62.5625 41.8833 61.1042L50.6624 52.325C52.0333 50.9542 52.6458 48.9709 52.2666 47.0459L51.4791 43.1959ZM26.0749 50.7792C26.3578 52.1918 26.2875 53.6523 25.8702 55.0312C25.453 56.41 24.7018 57.6646 23.6833 58.6834C21.4374 60.9292 14.4666 62.5917 9.94578 63.4667C7.93328 63.8459 6.15411 62.0667 6.53328 60.0542C7.40828 55.5334 9.04161 48.5625 11.3166 46.3167C12.3354 45.2982 13.5899 44.547 14.9688 44.1297C16.3477 43.7125 17.8082 43.6422 19.2208 43.925C22.6333 44.5667 25.4333 47.3667 26.0749 50.7792ZM37.9166 26.25C37.9166 23.0417 40.5416 20.4167 43.7499 20.4167C46.9583 20.4167 49.5833 23.0417 49.5833 26.25C49.5833 29.4584 46.9583 32.0834 43.7499 32.0834C40.5416 32.0834 37.9166 29.4584 37.9166 26.25Z"/>
@@ -111,7 +110,7 @@
 				</div>
 				<h3>Оперативность</h3>
 			</div>
-			<div class="preim-item preim-kachestvo wow fadeInUp" data-wow-offset="100">
+			<div class="preim-item preim-kachestvo">
 				<div class="preim-icon">
 					<svg width="60" height="70" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M39.6081 0H4.56209C3.32794 0.0327675 2.15654 0.552687 1.30242 1.44678C0.448308 2.34088 -0.0195093 3.53692 0.000623928 4.775V65.225C-0.0195093 66.4631 0.448308 67.6591 1.30242 68.5532C2.15654 69.4473 3.32794 69.9672 4.56209 70H55.2617C56.4959 69.9672 57.6673 69.4473 58.5214 68.5532C59.3755 67.6591 59.8433 66.4631 59.8232 65.225V19.8L39.6081 0ZM37.3897 22.5V4.6L55.5857 22.5H37.3897Z"/>
@@ -120,7 +119,7 @@
 				</div>
 				<h3>Качество</h3>
 			</div>
-			<div class="preim-item preim-gibkost wow fadeInRight" data-wow-offset="100">
+			<div class="preim-item preim-gibkost">
 				<div class="preim-icon">
 					<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="35" cy="35" r="35"/>
@@ -134,7 +133,7 @@
 	</div>
 
 	<div class="startax-form container">
-		<div class="startax-form-content wow zoomInUp" data-wow-duration="2.5s">
+		<div class="startax-form-content">
 			<h2>Свяжитесь с&nbsp;нами</h2>
 			<p>По вопросам сотрудничества свяжитесь с нами по указанным контактам, либо оставьте сообщение через форму обратной связи ниже:</p>
 			<form>
@@ -154,13 +153,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="startax-form-pic wow zoomInDown" data-wow-duration="2.5s"></div>
+		<div class="startax-form-pic"></div>
 	</div>
 
 	<footer>
 		<div class="container">
 			<div class="foot-logo-soc">
-				<img src="img/logo-foot.svg" alt="">
+				<img src="img/logo-foot.svg" alt="" class="logo-foot">
 				<div class="foot-soc">
 					<a href="#"><img src="img/linkedin.svg" alt=""></a>
 					<a href="#"><img src="img/facebook.svg" alt=""></a>
@@ -180,7 +179,6 @@
 
 	<script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/wow.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
