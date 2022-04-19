@@ -1375,6 +1375,7 @@ footer .container {
 .country-card circle,
 .country-card ellipse {
 	fill: #FF6B26;
+	transition: .2s;
 }
 .country-card:hover {
 	color: #fff;
@@ -1747,7 +1748,7 @@ footer .container {
 	background-color: #fff;
 	opacity: 0;
 	z-index: -1;
-	transition: .3s linear;
+	transition: .2s linear;
 }
 .startax-hotels-list.active {
 	opacity: 1;
@@ -1809,4 +1810,198 @@ footer .container {
 }
 .startax-hotels-detail:hover {
 	text-decoration: underline;
+}
+@media (max-width: 700px) {
+	.startax-hotels h2 {
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.startax-hotels-slogan {
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: bold;
+		padding: 20px 0;
+	}
+}
+
+.country-exkursii {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.country-exkursii h2 {
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: bold;
+}
+.country-exkursii-slider {
+	margin: 0 -10px;
+}
+.country-exkursii-item {
+	color: #1F1F1F;
+	text-decoration: none;
+	display: block;
+	margin: 0 auto 20px;
+	font-size: 16px;
+	line-height: 21px;
+	max-width: 340px;
+	transition: .2s;
+}
+.country-exkursii-item:hover {
+	opacity: .7;
+}
+.country-exkursii-item img {
+	display: block;
+	width: 100%;
+}
+.country-exkursii-item h4 {
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: bold;
+	margin: 15px 0 7px;
+}
+.country-exkursii-slider .slick-prev {
+	left: 42%;
+	top: auto;
+	bottom: -50px;
+	height: 40px;
+	z-index: 2;
+}
+.country-exkursii-slider .slick-next {
+	right: 42%;
+	top: auto;
+	bottom: -50px;
+	height: 40px;
+	z-index: 2;
+}
+.country-exkursii-slider .slick-prev:before {
+    content: url('../img/slider-arr-left.png');
+}
+.country-exkursii-slider .slick-next:before {
+    content: url('../img/slider-arr-right.png');
+}
+@media (max-width: 1400px) {
+	.country-exkursii-item {
+		max-width: 95%;
+	}
+}
+@media (max-width: 1199px) {
+	.country-exkursii-item {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.country-exkursii-item h4 {
+		font-size: 18px;
+		line-height: 24px;
+		margin: 12px 0 5px;
+	}
+}
+@media (max-width: 700px) {
+	.country-exkursii h2 {
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 600px) {
+	.country-exkursii-item {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.country-exkursii-item h4 {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 10px 0 5px;
+	}
+	.country-exkursii-slider .slick-prev {
+		left: 37%;
+	}
+	.country-exkursii-slider .slick-next {
+		right: 37%;
+	}
+}
+
+.recommend-tour {
+	padding-top: 50px;
+	padding-bottom: 150px;
+}
+.recommend-tour h2 {
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: bold;
+}
+.recommend-tour-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.recommend-tour-item {
+	width: 32%;
+	border: 1px solid #FF6B26;
+	border-radius: 10px;
+	padding: 10px;
+}
+.recommend-tour-pic {
+	position: relative;
+}
+.recommend-tour-pic span {
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 15px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.recommend-tour-pop span {
+	background-color: #FF6B26;
+}
+.recommend-tour-new span {
+	background-color: #00AB11;
+}
+.recommend-tour-active span {
+	background-color: #29CCFF;
+}
+.recommend-tour-pic img {
+	width: 100%;
+	display: block;
+}
+.recommend-tour-info {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 15px;
+}
+.recommend-tour-name {
+	width: 60%;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+}
+.recommend-tour-place {
+	color: #1F1F1F;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 20px;
+}
+.recommend-tour-place img {
+	margin-right: 5px;
+}
+.recommend-tour-mail {
+	font-size: 18px;
+	line-height: 25px;
+	color: #FF6B26;
+	display: block;
+	padding-top: 10px;
+}
+.recommend-tour-mail:hover {
+	text-decoration: none;
+}
+@media (max-width: 700px) {
+	.recommend-tour h2 {
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
 }

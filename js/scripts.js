@@ -104,15 +104,52 @@ $(document).ready(function(){
     $('.startax-hotels-list').not($(this).children()).removeClass('active');
   });
 
-  /*$('.naprav-slider .slick-center').css('opacity',1);
-  $('.naprav-slider .slick-center').prev().css('opacity',1);
-  $('.naprav-slider .slick-center').next().css('opacity',1);
+  
+  $('.country-exkursii-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    speed: 1000,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
 
-  $('.naprav-slider').on('afterChange', function(){
-    $('.naprav-slider .slick-slide').css('opacity',0.5);
-    $('.naprav-slider .slick-center').css('opacity',1);
-    $('.naprav-slider .slick-center').prev().css('opacity',1);
-    $('.naprav-slider .slick-center').next().css('opacity',1);
-  });*/
+  function maxHeight(element) {
+    $(element).height('auto');
+    let maxHeight = 0;
+    $(element).each(function(i,elem) {
+      if($(this).height() > maxHeight) maxHeight = $(this).height();
+    });
+    $(element).height(maxHeight);
+  }
+
+  maxHeight($('.country-exkursii-top'));
+  maxHeight($('.country-exkursii-bottom'));
+
+  $(window).resize(function() {
+    maxHeight($('.country-exkursii-top'));
+    maxHeight($('.country-exkursii-bottom'));
+  });
 
 });
