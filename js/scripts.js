@@ -147,9 +147,28 @@ $(document).ready(function(){
   maxHeight($('.country-exkursii-top'));
   maxHeight($('.country-exkursii-bottom'));
 
-  $(window).resize(function() {
+  $(window).on('resize orientationchange',function(){
     maxHeight($('.country-exkursii-top'));
     maxHeight($('.country-exkursii-bottom'));
   });
+
+  
+  $('.recommend-tour-mail').on('click', function(e){
+    e.preventDefault();
+    let tourName = $(this).attr('data-name');
+    $('.recommend-tour-popup form [type="hidden"]').val(tourName);
+    $('.recommend-tour-popup').addClass('open');
+  });
+
+  $(document).on('click', function(e){
+    let popupCloseElem = e.target;
+    console.log(e.target);
+    if($(popupCloseElem).parents().hasClass('recommend-tour-popup') || $(popupCloseElem).hasClass('recommend-tour-popup') || $(popupCloseElem).hasClass('recommend-tour-mail')) {
+      return;
+    }
+    else {
+      $('.recommend-tour-popup').removeClass('open');
+    }
+  })
 
 });
